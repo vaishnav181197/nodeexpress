@@ -1,7 +1,7 @@
-import {Router} from 'express'
+import express from 'express'
 import productsController from './products'
 
-const router:Router=Router();
+const router=express.Router();
 
 router.use("/product",productsController);
 

@@ -1,10 +1,13 @@
-import {Router,Request,Response,NextFunction} from 'express'
+import express from 'express'
 
-const router:Router=Router();
+const router=express.Router();
 
-router.get('/',(req:Request,res:Response,next:NextFunction)=>{
+router.get('/list',(req:any,res:any,next:any)=>{
     try{
-        const resp={name:"fried rice"}
+        const resp={
+            name:"fried rice",
+            price:120
+        }
         res.json(resp)
     }catch(error){
         next(error)
